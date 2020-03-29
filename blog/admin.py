@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, room
+
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
@@ -13,4 +14,11 @@ class PostAdmin(admin.ModelAdmin):
     date_hierarchy = 'publish'
     ordering = ('status', 'publish')
 
-
+@admin.register(room)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('hotel', 'status', 'slug', 'roomType', 'roomID',
+                    'price', )
+    list_filter = ('status', )
+    search_fields = ('hotel', 'roomID', 'roomType')
+    prepopulated_fields = {'slug': ('hotel', 'roomType', 'roomID')}
+    ordering = ('status', 'price')

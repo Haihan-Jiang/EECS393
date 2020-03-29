@@ -6,15 +6,14 @@ from django.contrib.auth.models import User
 class PublishedManager(models.Manager):
     def get_queryset(self):
         return super(PublishedManager,
-                     self).get_queryset() \
-            .filter(status='published')
+                     self).get_queryset()
 
 
 ##This is a demo class
 class Post(models.Model):
     STATUS_CHOICES = (
-        (0, 'Draft'),
-        (1, 'Published'),
+        ('draft', 'Draft'),
+        ('publish', 'Published'),
     )
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250,
@@ -43,9 +42,10 @@ class Post(models.Model):
 ##This is a user class
 class User(models.Model):
     STATUS_CHOICES = (
-        (0, 'checked out'),
-        (1, 'checked in'),
-        (2, 'has a reservation'),
+        ('0', 'checked out'),
+        ('1', 'checked in'),
+        ('2', 'has a reservation'),
+        ('3', 'no reservation')
     )
     userID = models.FloatField(null=True, blank=True, default=None)
     userPassword = models.FloatField(null=True, blank=True, default=None)
@@ -62,7 +62,7 @@ class User(models.Model):
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10,
                               choices=STATUS_CHOICES,
-                              default='draft')
+                              default='3')
     objects = models.Manager()  # The default manager.
     published = PublishedManager()  # Our custom manager.
 
@@ -77,9 +77,9 @@ class User(models.Model):
 ##This is a reservation class
 class reservation(models.Model):
     STATUS_CHOICES = (
-        (0, 'UnProcessed'),
-        (1, 'processing'),
-        (2, 'processed'),
+        ('0', 'UnProcessed'),
+        ('1', 'processing'),
+        ('2', 'processed'),
     )
     reservationID = models.FloatField(null=True, blank=True, default=None)
     roomNumber = models.IntegerField(null=True, blank=True, default=None)
@@ -94,7 +94,7 @@ class reservation(models.Model):
                                     related_name='room')  ## one to many relationship use forign key
     status = models.CharField(max_length=10,
                               choices=STATUS_CHOICES,
-                              default=None)
+                              default='0')
     objects = models.Manager()  # The default manager.
     published = PublishedManager()  # Our custom manager.
 
@@ -109,24 +109,27 @@ class reservation(models.Model):
 ##This is a room class
 class room(models.Model):
     STATUS_CHOICES = (
-        (0, 'Occupied'),
-        (1, 'Available'),
+        ('0', 'Occupied'),
+        ('1', 'Available'),
+        ('2', 'Unavailable'),
     )
     roomType = models.CharField(max_length=250)
+    created = models.DateTimeField(null=True, blank=True, default=None)
     hotel = models.CharField(max_length=250)
     roomID = models.FloatField(null=True, blank=True, default=None)
     price = models.IntegerField(null=True, blank=True, default=None)
-    slug = models.SlugField(max_length=250,
-                            unique_for_date='publish')
+    slug = models.SlugField(max_length=250,)
     objects = models.Manager()  # The default manager.
-    published = PublishedManager()  # Our custom manager.
-
+    #published = PublishedManager()  # Our custom manager.
+    status = models.CharField(max_length=10,
+                              choices=STATUS_CHOICES,
+                              default='2')
     class Meta:
         ordering = ('price',)
         app_label = 'blog'
 
     def __str__(self):
-        return self.roomID
+        return self.roomType
 
 
 ##This is a hotel class
