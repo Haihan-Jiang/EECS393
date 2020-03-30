@@ -10,7 +10,7 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-light" style="background:green">
-  <a style="color:white;" class="navbar-brand" href="#">Bookinghub</a>
+  <a style="color:white;" class="navbar-brand" href="#">BookingHub</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -32,16 +32,16 @@
 
 
 <div id="header">
-    <span class="logo">Bookinghub</span>
+    <span class="logo">BookingHub</span>
     {% if request.user.is_authenticated %} 
       <ul class="menu">
-        <li {% if section == "dashboard" %}class="selected"{% endif %}>
+        <li {% if section == "Dashboard" %}class="selected"{% endif %}>
         </li>
-        <li {% if section == "images" %}class="selected"{% endif %}>
-          <a href="#">Images</a>
+        <li {% if section == "Hotels" %}class="selected"{% endif %}>
+          <a href="#">Hotels</a>
         </li>
-        <li {% if section == "people" %}class="selected"{% endif %}>
-          <a href="#">People</a>
+        <li {% if section == "Restaurants" %}class="selected"{% endif %}>
+          <a href="#">Restaurants</a>
         </li> 
       </ul>
     {% endif %}
