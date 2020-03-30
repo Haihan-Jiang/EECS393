@@ -33,7 +33,7 @@ class Post(models.Model):
 
     class Meta:
         ordering = ('-publish',)
-        app_label = 'blog'
+        app_label = 'bookinghub'
 
     def __str__(self):
         return self.title
@@ -51,8 +51,7 @@ class User(models.Model):
     userPassword = models.FloatField(null=True, blank=True, default=None)
     name = models.CharField(max_length=250)
     gender = models.CharField(max_length=250)
-    slug = models.SlugField(max_length=250,
-                            unique_for_date='publish')
+    slug = models.SlugField(max_length=250,)
     expectedMinPrice = models.IntegerField(null=True, blank=True, default=None)
     expectedMaxPrice = models.IntegerField(null=True, blank=True, default=None)
     reservation = models.ForeignKey(User, on_delete=models.CASCADE,
@@ -68,7 +67,7 @@ class User(models.Model):
 
     class Meta:
         ordering = ('expectedMinPrice',)
-        app_label = 'blog'
+        app_label = 'bookinghub'
 
     def __str__(self):
         return self.name
@@ -88,22 +87,20 @@ class reservation(models.Model):
     checkOut = models.DateTimeField(default=None)
     reserveTime = models.DateTimeField(auto_now_add=True)
     price = models.IntegerField(null=True, blank=True, default=None)
-    slug = models.SlugField(max_length=250,
-                            unique_for_date='publish')
-    reservation = models.ForeignKey(User, on_delete=models.CASCADE,
-                                    related_name='room')  ## one to many relationship use forign key
+    slug = models.SlugField(max_length=250,)
+    room = models.ForeignKey(User, on_delete=models.CASCADE, related_name='room') ## one to many relationship use forign key
     status = models.CharField(max_length=10,
                               choices=STATUS_CHOICES,
                               default='0')
     objects = models.Manager()  # The default manager.
-    published = PublishedManager()  # Our custom manager.
+   # published = PublishedManager()  # Our custom manager.
 
     class Meta:
         ordering = ('reserveTime',)
-        app_label = 'blog'
+        app_label = 'bookinghub'
 
     def __str__(self):
-        return self.reservationID
+        return self.hotelName
 
 
 ##This is a room class
@@ -126,7 +123,7 @@ class room(models.Model):
                               default='2')
     class Meta:
         ordering = ('price',)
-        app_label = 'blog'
+        app_label = 'bookinghub'
 
     def __str__(self):
         return self.roomType
@@ -142,14 +139,13 @@ class hotel(models.Model):
     contactPhoneNumber = models.FloatField(null=True, blank=True, default=None)
     hotelStaff = models.ForeignKey(User, on_delete=models.CASCADE,
                                    related_name='hotelStaff')  ## one to many relationship use forign key
-    slug = models.SlugField(max_length=250,
-                            unique_for_date='publish')
+    slug = models.SlugField(max_length=250,)
     objects = models.Manager()  # The default manager.
-    published = PublishedManager()  # Our custom manager.
+    #published = PublishedManager()  # Our custom manager.
 
     class Meta:
         ordering = ('rating',)
-        app_label = 'blog'
+        app_label = 'bookinghub'
     def __str__(self):
         return self.hotelName
 
@@ -161,14 +157,13 @@ class hotelStaff(models.Model):
     name = models.CharField(max_length=250)
     contactEmail = models.EmailField(null=True, blank=True, default=None)
     contactPhoneNumber = models.FloatField(null=True, blank=True, default=None)
-    slug = models.SlugField(max_length=250,
-                            unique_for_date='publish')
+    slug = models.SlugField(max_length=250, )
     objects = models.Manager()  # The default manager.
     published = PublishedManager()  # Our custom manager.
 
     class Meta:
         ordering = ('staffID',)
-        app_label = 'blog'
+        app_label = 'bookinghub'
 
     def __str__(self):
         return self.name

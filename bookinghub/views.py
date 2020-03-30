@@ -3,7 +3,7 @@ from .models import Post
 def post_list(request):
     posts = Post.published.all()
     return render(request,
-                  'blog/post/list.html',
+                  'bookinghub/post/list.html',
                  {'posts': posts})
 
 from django.http import HttpResponse

@@ -77,7 +77,7 @@ class Migration(migrations.Migration):
                 ('price', models.IntegerField(blank=True, default=None, null=True)),
                 ('slug', models.SlugField(max_length=250, unique_for_date='publish')),
                 ('status', models.CharField(choices=[(0, 'UnProcessed'), (1, 'processing'), (2, 'processed')], default=None, max_length=10)),
-                ('reservation', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='room', to='blog.User')),
+                ('reservation', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='room', to='bookinghub.User')),
             ],
             options={
                 'ordering': ('reserveTime',),
@@ -111,7 +111,7 @@ class Migration(migrations.Migration):
                 ('contactEmail', models.EmailField(blank=True, default=None, max_length=254, null=True)),
                 ('contactPhoneNumber', models.FloatField(blank=True, default=None, null=True)),
                 ('slug', models.SlugField(max_length=250, unique_for_date='publish')),
-                ('hotelStaff', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='hotelStaff', to='blog.User')),
+                ('hotelStaff', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='hotelStaff', to='bookinghub.User')),
             ],
             options={
                 'ordering': ('rating',),
