@@ -42,3 +42,6 @@ def dashboard(request):
 def reservation(request):
     return render(request, 'account/reservation.html', {'section': 'reservation'})
 
+def confirmation(request):
+    return render(request, 'account/confirmation.html', {'section': 'confirmation'})
+
