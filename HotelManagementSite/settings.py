@@ -36,12 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     'bookinghub.apps.BookinghubConfig',
     'django.contrib.admin',
-=======
-    'bookinghub.apps.BookinghubConfig'
->>>>>>> 94a613982d4110cd8aaf1f1878499248a22c1f4b
 ]
 
 MIDDLEWARE = [
