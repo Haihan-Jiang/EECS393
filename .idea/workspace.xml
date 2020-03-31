@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2004514e-45a6-49d5-8176-f6be3f960967" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookinghub/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookinghub/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="2004514e-45a6-49d5-8176-f6be3f960967" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,12 +70,24 @@
       <updated>1585103099620</updated>
       <workItem from="1585103102244" duration="3396000" />
       <workItem from="1585281419970" duration="12589000" />
-      <workItem from="1585640242366" duration="1903000" />
+      <workItem from="1585640242366" duration="2180000" />
     </task>
+    <task id="LOCAL-00001" summary="added bootstrap and linked mystyle css">
+      <created>1585642407431</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585642407431</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added bootstrap and linked mystyle css" />
+    <option name="LAST_COMMIT_MESSAGE" value="added bootstrap and linked mystyle css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="496" y="19" key="#HotelManagementSite" timestamp="1585103268326">
@@ -92,29 +100,33 @@
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585103349883" />
     <state x="248" y="78" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.960@0.0.1707.960" timestamp="1585640259266" />
     <state x="279" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585291228553" />
-    <state width="1664" height="2" key="GridCell.Tab.0.bottom" timestamp="1585642223109">
+    <state x="419" y="75" key="CommitChangelistDialog2" timestamp="1585642406940">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="419" y="75" key="CommitChangelistDialog2/0.0.1707.960@0.0.1707.960" timestamp="1585642406940" />
+    <state width="1664" height="211" key="GridCell.Tab.0.bottom" timestamp="1585642422499">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585103355509" />
-    <state width="1664" height="2" key="GridCell.Tab.0.bottom/0.0.1707.960@0.0.1707.960" timestamp="1585642223109" />
+    <state width="1664" height="211" key="GridCell.Tab.0.bottom/0.0.1707.960@0.0.1707.960" timestamp="1585642422499" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585317208143" />
-    <state width="1664" height="2" key="GridCell.Tab.0.center" timestamp="1585642223109">
+    <state width="1664" height="211" key="GridCell.Tab.0.center" timestamp="1585642422499">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585103355509" />
-    <state width="1664" height="2" key="GridCell.Tab.0.center/0.0.1707.960@0.0.1707.960" timestamp="1585642223109" />
+    <state width="1664" height="211" key="GridCell.Tab.0.center/0.0.1707.960@0.0.1707.960" timestamp="1585642422499" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585317208143" />
-    <state width="1664" height="2" key="GridCell.Tab.0.left" timestamp="1585642223109">
+    <state width="1664" height="211" key="GridCell.Tab.0.left" timestamp="1585642422499">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585103355509" />
-    <state width="1664" height="2" key="GridCell.Tab.0.left/0.0.1707.960@0.0.1707.960" timestamp="1585642223109" />
+    <state width="1664" height="211" key="GridCell.Tab.0.left/0.0.1707.960@0.0.1707.960" timestamp="1585642422499" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585317208143" />
-    <state width="1664" height="2" key="GridCell.Tab.0.right" timestamp="1585642223109">
+    <state width="1664" height="211" key="GridCell.Tab.0.right" timestamp="1585642422499">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585103355509" />
-    <state width="1664" height="2" key="GridCell.Tab.0.right/0.0.1707.960@0.0.1707.960" timestamp="1585642223109" />
+    <state width="1664" height="211" key="GridCell.Tab.0.right/0.0.1707.960@0.0.1707.960" timestamp="1585642422499" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585317208143" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1585283686236">
       <screen x="0" y="0" width="1920" height="1040" />
