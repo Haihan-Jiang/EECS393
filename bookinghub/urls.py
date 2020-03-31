@@ -9,7 +9,8 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('', views.dashboard, name='dashboard'),
     path('reservation/', views.reservation, name='reservation'),
-    path('confirmation/', views.confirmation, name='confirmation')
+    path('confirmation/', views.confirmation, name='confirmation'),
+    path('register/', views.register, name='register')
 ]
 
  
