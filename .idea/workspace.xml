@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2004514e-45a6-49d5-8176-f6be3f960967" name="Default Changelist" comment="" />
+    <list default="true" id="2004514e-45a6-49d5-8176-f6be3f960967" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +12,11 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZbLyF44Z6jvecabZkiHCElMJnW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -19,6 +25,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -36,7 +43,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="HotelManagementSite.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\12162\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\aircr\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -65,6 +72,7 @@
       <updated>1585103099620</updated>
       <workItem from="1585103102244" duration="3396000" />
       <workItem from="1585281419970" duration="12589000" />
+      <workItem from="1585693522901" duration="476000" />
     </task>
     <servers />
   </component>
@@ -76,10 +84,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="496" y="19" key="#HotelManagementSite/0.0.1536.824@0.0.1536.824" timestamp="1585103268326" />
-    <state x="279" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585291228553">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="248" y="78" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585693540109">
+      <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585103349883" />
+    <state x="248" y="78" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.960@0.0.1707.960" timestamp="1585693540109" />
     <state x="279" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585291228553" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1585317208143">
       <screen x="0" y="0" width="1920" height="1040" />
