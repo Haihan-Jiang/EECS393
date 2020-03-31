@@ -39,4 +39,6 @@ def dashboard(request):
                 'account/dashboard.html',
                 {'section': 'dashboard'})
 
+def reservation(request):
+    return render(request, 'account/reservation.html', {'section': 'reservation'})
 

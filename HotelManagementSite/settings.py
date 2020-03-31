@@ -31,13 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.BlogConfig'
+    'bookinghub.apps.BookinghubConfig',
+    'django.contrib.admin',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +123,4 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'dashboard' 
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
+RESERVATION_URL = 'reservation'
