@@ -1,1 +1,44 @@
 {% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %} 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="reservation.css" />
+
+    <div style="text-align:center; margin-top: 10px">
+        <h1>Reservation</h1>
+    </div>
+
+    <div class="reserve" style="padding:20px; margin-top:2rem; margin-left:35%; margin-right:35%; box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;">
+        <form method="GET" action="{% url 'confirmation' %}">
+            <div class="form-group">
+                <label for="checkInDate">check-in date:</label>
+                <input name="checkInDate" class="form-control" id="checkInDate" type="date" />
+            </div>
+
+
+            <div class="form-group">
+                <label for="checkOutDate">check-out date:</label>
+                <input name="checkOutDate" class="form-control" id="checkOutDate" type="date" />
+            </div>
+
+            <div class="form-group">
+                <label for="name">hotel name:</label>
+                <input name="name" class="form-control" id="name" type="text" />
+            </div>
+
+             <div class="form-group">
+                <label for="roomNumber">room number:</label>
+                <input name="roomNumber" class="form-control" id="roomNumber" type="text" />
+            </div>
+
+            <div style="text-align:center">
+                <button type="submit" class="btn btn-md btn-danger">submit</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
+
+
