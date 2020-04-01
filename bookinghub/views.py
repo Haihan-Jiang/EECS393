@@ -1,16 +1,19 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
+from django.http import HttpResponse
+from django.shortcuts import render
+from django.contrib.auth import authenticate, login
+from .forms import LoginForm
+from django.contrib.auth.decorators import login_required
+from .forms import LoginForm, UserRegistrationForm
+
+
 def post_list(request):
     posts = Post.published.all()
     return render(request,
                   'bookinghub/post/list.html',
                  {'posts': posts})
 
-from django.http import HttpResponse
-from django.shortcuts import render
-from django.contrib.auth import authenticate, login 
-from .forms import LoginForm
-from django.contrib.auth.decorators import login_required
 
 def user_login(request):
     if request.method == 'POST':
@@ -33,19 +36,21 @@ def user_login(request):
         form = LoginForm()
     return render(request, 'account/login.html', {'form': form})
 
+
 @login_required
 def dashboard(request):
     return render(request, 
                 'account/dashboard.html',
                 {'section': 'dashboard'})
 
+
 def reservation(request):
     return render(request, 'account/reservation.html', {'section': 'reservation'})
+
 
 def confirmation(request):
     return render(request, 'account/confirmation.html', {'section': 'confirmation'})
 
-from .forms import LoginForm, UserRegistrationForm
 
 def register(request):
     if request.method == 'POST':
