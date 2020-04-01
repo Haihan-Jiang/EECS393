@@ -199,6 +199,10 @@ fabric.properties
 # .idea/misc.xml
 # *.ipr
 
+# IDEA config files
+.idea/
+
+
 # Sonarlint plugin
 .idea/**/sonarlint/
 
