@@ -214,3 +214,4 @@ fabric.properties
 .idea/**/markdown-navigator/
 
 # End of https://www.gitignore.io/api/webstorm,meteorjs,node
+db.sqlite3
