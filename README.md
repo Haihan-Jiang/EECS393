@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-To run the source code on your machine, you'll need to set up a virtual environment in your python IDE. For MacOS/Linux users, enter the following command into your terminal. For Windows user enter the command into cmd or powershell. 
+To run the source code on your machine, you'll need to have Python 3 installed in order to set up a virtual environment in your Python IDE. For MacOS/Linux users, enter the following command into your terminal. For Windows users enter the command into cmd or powershell. 
 
 ```
 pip install virtualenv
