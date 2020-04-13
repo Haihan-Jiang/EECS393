@@ -12,5 +12,3 @@ urlpatterns = [
     path('confirmation/', views.confirmation, name='confirmation'),
     path('register/', views.register, name='register')
 ]
-
- 
