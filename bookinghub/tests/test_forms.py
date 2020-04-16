@@ -18,8 +18,8 @@ class TestForms(SimpleTestCase):
 
     def test_login_form_with_invalid_data(self):
         form = LoginForm(data = {
-            'username': 'EECS338',
-            'password': 'EECS338'
+            'username': 'EECS340',
+            'password': 'EECS340'
         })
         self.assertTrue(form.is_valid())
         self.assertEquals(len(form.errors), 0)

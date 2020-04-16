@@ -19,19 +19,12 @@ class TestLoginPage(StaticLiveServerTestCase):
             alert.find_element_by_tag_name('p').text,
             'Username:'
         )
-        time.sleep(10)
 
     def test_login_button_redirects_to_login(self):
-        self.browser.find_element_by_link_text('Log-in').click()
         self.browser.get(self.live_server_url)
-        time.sleep(20)
-
-    def test_signup_button_redirects_to_register(self):
-        register_url = self.live_server_url + reverse('register')
-        self.browser.get(self.live_server_url)
+        login_url = self.live_server_url + reverse('login')
         self.browser.find_element_by_tag_name('a').click()
         self.assertEquals(
-            self.browser.current_url,
-            register_url
+            self.browser.current_url[:-7],
+            login_url
         )
-        print('successful redirect to registration')
