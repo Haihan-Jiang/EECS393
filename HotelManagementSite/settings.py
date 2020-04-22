@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bookinghub.apps.BookinghubConfig',
     'django.contrib.admin',
-    'rest_framework'
+    #'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -126,7 +126,8 @@ LOGOUT_URL = 'logout'
 RESERVATION_URL = 'reservation'
 CONFIRMATION_URL = 'confirmation'
 DASHBOARD_URL = 'dashboard'
-
+'''
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
 }
+'''
